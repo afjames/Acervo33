@@ -112,13 +112,15 @@ classDiagram
         +string: estado_conservacao
         +int: album_id
         +to_dict(): dict
-    }
+    }  ```
+
+
 
     Artista "1" --> "0..*" Album : possui
     Album "1" --> "0..*" Musica : contem
     Album "1" --> "0..*" MidiaFisica : possui
 
-    ```
+   
 
     📁 Estrutura de Arquivos do Projeto
 

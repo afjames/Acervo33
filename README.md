@@ -118,6 +118,8 @@ classDiagram
     Album "1" --> "0..*" Musica : contem
     Album "1" --> "0..*" MidiaFisica : possui
 
+    ```
+
     📁 Estrutura de Arquivos do Projeto
 
     acervo33/

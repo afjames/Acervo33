@@ -79,44 +79,48 @@ O backend traduz o esquema do MySQL em classes Python utilizando o ORM **Flask-S
 ```mermaid
 classDiagram
     class Artista {
-        +id: int
-        +nome: string
+        +int: id
+        +string: nome
         +to_dict(): dict
     }
 
     class Album {
-        +id: int
-        +titulo: string
-        +ano_lancamento: int
-        +genero: string
-        +duracao_album: time
-        +nota: int
-        +capa_url: string
-        +produtor: string
-        +artista_id: int
+        +int: id
+        +string: titulo
+        +int ano:_lancamento
+        +string: genero
+        +time: duracao_album
+        +int: nota
+        +string: capa_url
+        +string: produtor
+        +int: artista_id
         +to_dict(): dict
     }
 
     class Musica {
-        +id: int
-        +titulo: string
-        +faixa_numero: int
-        +favorita: bool
-        +album_id: int
+        +int: id
+        +string: titulo
+        +int: faixa_numero
+        +bool: favorita
+        +int: album_id
         +to_dict(): dict
     }
 
     class MidiaFisica {
-        +id: int
-        +formato: string
-        +estado_conservacao: string
-        +album_id: int
+        +int: id
+        +string: formato
+        +string: estado_conservacao
+        +int: album_id
         +to_dict(): dict
-    }
-
+    }  
+    
     Artista "1" --> "0..*" Album : possui
     Album "1" --> "0..*" Musica : contem
     Album "1" --> "0..*" MidiaFisica : possui
+```
+   
+
+    📁 Estrutura de Arquivos do Projeto
 
     acervo33/
 ├── app/
@@ -143,19 +147,32 @@ classDiagram
 ├── requirements.txt
 └── run.py
 
-git clone [https://github.com/afjames/Acervo33.git](https://github.com/afjames/Acervo33.git)
-cd Acervo33
+🚀 Como Executar o Projeto
 
-python3 -m venv venv
-source venv/bin/activate
+   1. Clonar o repositório:
 
-pip install -r requirements.txt
+    git clone [https://github.com/afjames/Acervo33.git](https://github.com/afjames/Acervo33.git)
+   cd Acervo33
 
-DB_USER=seu_usuario
-DB_PASSWORD=sua_senha
-DB_HOST=localhost
-DB_PORT=3306
-DB_NAME=acervo33_db
-SECRET_KEY=sua_chave_secreta
+   2. Criar e ativar o ambiente virtual:
 
-python run.py
+      python3 -m venv venv
+      source venv/bin/activate
+   
+   3. Instalar as dependências:
+
+      pip install -r requirements.txt
+
+   4. Configurar as variáveis de ambiente:
+
+      Crie um arquivo .env na raiz do projeto com o seguinte conteúdo:
+
+      DB_USER=seu_usuario
+      DB_PASSWORD=sua_senha
+      DB_HOST=localhost
+      DB_NAME=acervo33_db
+      SECRET_KEY=sua_chave_secreta
+
+   5.  Executar a aplicação:
+
+      python run.py

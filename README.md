@@ -122,7 +122,8 @@ classDiagram
 
     📁 Estrutura de Arquivos do Projeto
 
-    acervo33/
+```text
+acervo33/
 ├── app/
 │   ├── models/
 │   │   ├── __init__.py
@@ -146,6 +147,7 @@ classDiagram
 ├── README.md
 ├── requirements.txt
 └── run.py
+```
 
 🚀 Como Executar o Projeto
 

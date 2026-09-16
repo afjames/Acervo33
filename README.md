@@ -79,39 +79,39 @@ O backend traduz o esquema do MySQL em classes Python utilizando o ORM **Flask-S
 ```mermaid
 classDiagram
     class Artista {
-        +int id
-        +string nome
-        +to_dict() dict
+        +int: id
+        +string: nome
+        +to_dict(): dict
     }
 
     class Album {
-        +int id
-        +string titulo
-        +int ano_lancamento
-        +string genero
-        +time duracao_album
-        +int nota
-        +string capa_url
-        +string produtor
-        +int artista_id
-        +to_dict() dict
+        +int: id
+        +string: titulo
+        +int ano:_lancamento
+        +string: genero
+        +time: duracao_album
+        +int: nota
+        +string: capa_url
+        +string: produtor
+        +int: artista_id
+        +to_dict(): dict
     }
 
     class Musica {
-        +int id
-        +string titulo
-        +int faixa_numero
-        +bool favorita
-        +int album_id
-        +to_dict() dict
+        +int: id
+        +string: titulo
+        +int: faixa_numero
+        +bool: favorita
+        +int: album_id
+        +to_dict(): dict
     }
 
-    class MidiaFisica 
-        +int id
-        +string formato
-        +string estado_conservacao
-        +int album_id
-        +to_dict() dict
+    class MidiaFisica {
+        +int: id
+        +string: formato
+        +string: estado_conservacao
+        +int: album_id
+        +to_dict(): dict
     }
 
     Artista "1" --> "0..*" Album : possui

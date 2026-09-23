@@ -22,4 +22,7 @@ def create_app():
 
     db.init_app(app)
 
+    with app.app_context():
+        from app.models import Artista, Album, MidiaFisica, Musica
+
     return app

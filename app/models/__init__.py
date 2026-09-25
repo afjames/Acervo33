@@ -1,28 +1,7 @@
-import os
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
-from dotenv import load_dotenv
+from app.models.artista import Artista
+from app.models.album import Album
+from app.models.midiaFisica import MidiaFisica
+from app.models.musica import Musica
 
-load_dotenv()
+__all__ = ['Artista', 'Album', 'MidiaFisica', 'Musica']
 
-db = SQLAlchemy()
-
-def create_app():
-    app = Flask(__name__)
-    
-    user = os.getenv('DB_USER')
-    password = os.getenv('DB_PASSWORD')
-    host = os.getenv('DB_HOST')
-    port = os.getenv('DB_PORT', 3306)
-    name = os.getenv('DB_NAME')
-
-    # Monta a String de Conexao com PyMySQL
-    app.config['SQLALCHEMY_DATABASE_URI'] = f"mysql+pymysql://{user}:{password}@{host}:{port}/{name}"
-    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
-    db.init_app(app)
-
-    with app.app_context():
-        from app.models import Artista, Album, MidiaFisica, Musica
-
-    return app

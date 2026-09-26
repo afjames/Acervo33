@@ -1,6 +1,6 @@
 # 🎵 Acervo33 - Sistema de Gestão de Acervo Musical
 
-O **Acervo33** é uma aplicação web desenvolvida sob a arquitetura **SPA (Single Page Application)** para catalogação e gerenciamento de acervos musicais físicos e digitais. O projeto foi estruturado para atender aos requisitos acadêmicos de três disciplinas principais: **Banco de Dados**, **Programação Orientada a Objetos (POO)** e **Design de Interface (UI/UX)**.
+O **Acervo33** é uma aplicação web desenvolvida para catalogação e gerenciamento de acervos musicais físicos e digitais. O projeto foi estruturado para atender aos requisitos acadêmicos de três disciplinas principais: **Banco de Dados**, **Programação Orientada a Objetos (POO)** e **Design de Interface (UI/UX)**.
 
 ---
 
@@ -8,7 +8,6 @@ O **Acervo33** é uma aplicação web desenvolvida sob a arquitetura **SPA (Sing
 
 ### **Banco de Dados**
 * **MySQL (Engine InnoDB):** SGBD relacional para armazenamento persistente em **3FN**.
-* **Charset & Collation (`utf8mb4_unicode_ci`):** Suporte completo a acentuação e caracteres especiais.
 
 ### **Backend (POO)**
 * **Python 3:** Linguagem base da aplicação.
